@@ -109,7 +109,7 @@ li {
 
 /* *********** bird ********** */
 .sky {
-    height: 50vh;
+    height: 90vh;
     position: relative;
     /* background: #87CEEB; */
     background: linear-gradient(0deg, rgba(135, 206, 235, 0.58) 0%, rgba(135, 206, 235, 1) 100%);
@@ -134,22 +134,22 @@ li {
 
 .bird-1 {
     margin-left: -300px;
-    bottom: 0;
+    bottom: 150px;
 }
 
 .bird-2 {
     margin-left: -200px;
-    bottom: 10px;
+    bottom: 150px;
 }
 
 .bird-3 {
     margin-left: -350px;
-    bottom: 50px;
+    bottom: 200px;
 }
 
 .bird-4 {
     margin-left: -250px;
-    bottom: -50px;
+    bottom: 100px;
 }
 
 .bird-css,
