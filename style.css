@@ -109,12 +109,14 @@ li {
 
 /* *********** bird ********** */
 .sky {
-    height: 40vh;
+    height: 50vh;
     position: relative;
-    background: #87CEEB;
+    /* background: #87CEEB; */
     background: linear-gradient(0deg, rgba(135, 206, 235, 0.58) 0%, rgba(135, 206, 235, 1) 100%);
+    background-color: #fff;
     display: flex;
     justify-content: end;
+    z-index: 2;
     /* overflow: hidden; */
 }
 
@@ -127,7 +129,7 @@ li {
     display: flex;
     position: absolute;
     left: 0;
-    z-index: 10;
+    z-index: 100;
 }
 
 .bird-1 {
@@ -293,14 +295,55 @@ li {
 .sun {
   width: 100px;
   height: 100px;
-  background: #FFD700; /* golden yellow */
+  /* background: #FFD700; */
   border-radius: 50%;
   /* box-shadow: 0 0 400px #FFD700; */
-  box-shadow: 0 0 40px #FFD700;
+  /* box-shadow: 0 0 40px #FFD700; */
   z-index: 1;
-  background: radial-gradient(circle, #fffacd, #FFD700);
+  /* background: radial-gradient(circle, #fffacd, #FFD700); */
+}
+.sun {
+  --sun-start: #fffacd;
+  --sun-end: #FFD700;
+  background: radial-gradient(circle, var(--sun-start), var(--sun-end));
+  box-shadow: 0 0 40px var(--sun-end);
 }
 
+
+
+/*  *********** sea ***********  */
+/* body {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to top, #ffb347, #ffcc70);
+} */
+
+.sea {
+  position: absolute;
+  /* bottom: 0; */
+  top: -40%;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-color: rgba(0, 123, 255, 1);
+}
+
+.waves {
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+}
+/* .waves5 {
+  width: 20%;
+  max-height: 60px !important;
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+} */
 
 
 

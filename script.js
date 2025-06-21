@@ -1,6 +1,6 @@
 let cartimeline;
 let tyretimeline;
-let carspeed = 10;
+let carspeed = 6;
 let tyrespeed = 3;
 let isReversing = false;
 let isstop = false;
@@ -10,7 +10,7 @@ function go() {
     if (!cartimeline) {
         cartimeline = gsap.timeline();
         cartimeline.to(".car", {
-            duration: 20,
+            duration: 10,
             x: window.innerWidth,
             ease: "power1.inOut"
         })
@@ -23,7 +23,7 @@ function go() {
     // cartimeline.timeScale(carspeed / 10); // carspeed 10 = normal, 20 = 2x faster
     if (!tyretimeline) {
         tyretimeline = gsap.to(".tyre", {
-            duration: 4,
+            duration: 1,
             rotation: 360,
             ease: "none",
             repeat: -1
@@ -191,31 +191,89 @@ gsap.to(".bird-jerk", {
     repeat: -1
 });
 // could animation
-gsap.to(".cloud-1",{
-    x:-window.innerWidth,
-    duration:1210,
-    repeat:-1
+gsap.to(".cloud-1", {
+    x: -window.innerWidth,
+    duration: 810,
+    repeat: -1
 })
 
-gsap.to(".cloud",{
-    x:-window.innerWidth,
-    duration:1210,
-    repeat:-1
+gsap.to(".cloud", {
+    x: -window.innerWidth,
+    duration: 810,
+    repeat: -1
 })
 gsap.to(".sun-set", {
-    y:(window.innerHeight)/2,
-    duration:20,
-    repeat:-1,
-    scale:5,
-    //   filter: "hue-rotate(120deg)",
+    y: (window.innerHeight) ,
+    duration: 800,
+    // repeat: -1,
+    scale: 12,
 })
-const tl = gsap.timeline({ repeat: -1, yoyo: true });
-
-tl.to(".sun", {
-  filter: "hue-rotate(120deg)", // changes from yellow to orange/red/pink
-  duration: 20,
+gsap.to(".sun", {
+  "--sun-start": "#FFA07A", // light salmon
+  "--sun-end": "#FF8C00",   // dark orange
+  duration: 600,
   ease: "power1.inOut"
 });
+
+// waves 
+  gsap.to(".wave1", {
+    x: "-60",
+    duration: 10,
+    repeat: -1,
+    yoyo:true,
+  ease: "power1.inOut"
+    // ease: "linear"
+  });
+
+  gsap.to(".wave2", {
+    x: "-6",
+    duration: 10,
+    repeat: -1,
+    yoyo:true,
+  ease: "power1.inOut"
+    // ease: "linear"
+  });
+
+  gsap.to(".wave3", {
+    x: "-8",
+    duration: 2,
+    repeat: -1,
+    yoyo:true,
+  ease: "power1.inOut"
+    // ease: "linear"
+  });
+
+  gsap.to(".wave4", {
+    x: "-10",
+    duration: 4,
+    repeat: -1,
+    yoyo:true,
+  ease: "power1.inOut"
+    // ease: "linear"
+  });
+  gsap.to(".wave5", {
+    x: "-12",
+    duration: 5,
+    repeat: -1,
+    yoyo:true,
+  ease: "power1.inOut"
+    // ease: "linear"
+  });
+  gsap.to(".wave6", {
+    x: "-10",
+    duration: 2,
+    repeat: -1,
+    yoyo:true,
+  ease: "power1.inOut"
+    // ease: "linear"
+  });
+// const tl = gsap.timeline({ repeat: -1, yoyo: true });
+
+// tl.to(".sun", {
+//   filter: "hue-rotate(120deg)", // changes from yellow to orange/red/pink
+//   duration: 200,
+//   ease: "power1.inOut"
+// });
 
 // gsap.utils.toArray(".cloud").forEach((cloud, i) => {
 //   gsap.to(cloud, {
